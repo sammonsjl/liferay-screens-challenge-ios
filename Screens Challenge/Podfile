@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+use_frameworks!
+
+link_with 'Screens Challenge'
+
+pod 'LiferayScreens', :git => 'https://github.com/liferay/liferay-screens.git', :branch => 'feature/LSR-262'
+pod 'LiferayScreensThemeDemo', :git => 'https://github.com/jmnavarro/liferay-screens-themes.git'
+
+

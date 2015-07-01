@@ -1,0 +1,6 @@
+framework module LiferayScreensThemeDemo {
+  umbrella header "Pods-LiferayScreensThemeDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,1 @@
+../../../LiferayScreens/ios/Framework/Core/Services/LRScreensassetentryService_v62.h

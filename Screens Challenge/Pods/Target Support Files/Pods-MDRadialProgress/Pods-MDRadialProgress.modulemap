@@ -1,0 +1,6 @@
+framework module MDRadialProgress {
+  umbrella header "Pods-MDRadialProgress-umbrella.h"
+
+  export *
+  module * { export * }
+}

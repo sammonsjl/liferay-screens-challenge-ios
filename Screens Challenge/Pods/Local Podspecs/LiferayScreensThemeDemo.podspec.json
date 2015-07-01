@@ -1,0 +1,29 @@
+{
+  "name": "LiferayScreensThemeDemo",
+  "module_name": "LiferayScreensThemeDemo",
+  "version": "1.0.0",
+  "summary": "A sample theme for Liferay Screens",
+  "homepage": "https://www.liferay.com/liferay-screens",
+  "license": {
+    "type": "LGPL 2.1",
+    "file": "LICENSE.md"
+  },
+  "source": {
+    "git": "https://github.com/jmnavarro/liferay-screens-themes.git",
+    "tag": "1.0.0"
+  },
+  "authors": {
+    "Jose Manuel Navarro": "jose.navarro@liferay.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Source/DemoTheme/**/*.{h,m,swift}",
+  "resources": "Source/DemoTheme/**/*.{xib,png,plist,lproj}",
+  "dependencies": {
+    "LiferayScreens": [
+
+    ]
+  }
+}
