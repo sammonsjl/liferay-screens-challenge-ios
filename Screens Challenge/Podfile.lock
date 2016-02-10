@@ -22,59 +22,56 @@ PODS:
     - AFNetworking/NSURLSession
   - CryptoSwift (0.0.10)
   - DTPickerPresenter (0.2.0)
+  - KeychainAccess (1.2.1)
   - Liferay-iOS-SDK (6.2.0.17):
     - AFNetworking (~> 2.5.0)
-  - LiferayScreens (1.0.0):
+  - Liferay-OAuth (0.1.0):
+    - Liferay-iOS-SDK (= 6.2.0.17)
+  - LiferayScreens (1.1.0):
     - CryptoSwift
     - DTPickerPresenter
+    - KeychainAccess
     - Liferay-iOS-SDK (= 6.2.0.17)
+    - Liferay-OAuth
     - MBProgressHUD (~> 0.9.1)
     - MDRadialProgress
     - ODRefreshControl
     - SMXMLDocument
     - TNRadioButtonGroup
-    - UICKeyChainStore
   - LiferayScreensThemeDemo (1.0.0):
     - LiferayScreens
   - MBProgressHUD (0.9.1)
-  - MDRadialProgress (1.3.1)
-  - ODRefreshControl (1.1.0)
-  - SMXMLDocument (1.0.1)
+  - MDRadialProgress (1.3.2)
+  - ODRefreshControl (1.2)
+  - SMXMLDocument (1.1)
   - TNRadioButtonGroup (0.4)
-  - UICKeyChainStore (2.0.6)
 
 DEPENDENCIES:
-  - LiferayScreens (from `https://github.com/liferay/liferay-screens.git`, branch
-    `feature/LSR-262`)
+  - LiferayScreens
   - LiferayScreensThemeDemo (from `https://github.com/jmnavarro/liferay-screens-themes.git`)
 
 EXTERNAL SOURCES:
-  LiferayScreens:
-    :branch: feature/LSR-262
-    :git: https://github.com/liferay/liferay-screens.git
   LiferayScreensThemeDemo:
     :git: https://github.com/jmnavarro/liferay-screens-themes.git
 
 CHECKOUT OPTIONS:
-  LiferayScreens:
-    :commit: 11a5b70b52b3aea02e25f5edc75edbe42c5de1df
-    :git: https://github.com/liferay/liferay-screens.git
   LiferayScreensThemeDemo:
-    :commit: 6c3c69130f09d8d824c6706bf2c60a812e8f5ab9
+    :commit: a496bd57adacdcce76e17a001290b5781e352fe5
     :git: https://github.com/jmnavarro/liferay-screens-themes.git
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   CryptoSwift: 3b886d001f50deb65623a8967d68f6b8bf8d9ba1
   DTPickerPresenter: 1976573e3475534559b6ec1dad64b2ece16c966d
+  KeychainAccess: 3d7922baf90762a976adb7f6030d74c1a4110a1d
   Liferay-iOS-SDK: 00b511b88592d07faade2bed8252c04193df565d
-  LiferayScreens: c4cc7f0476b2de0d14bea44edcb3b96f42eebf73
+  Liferay-OAuth: 4e217d2e2483788324b16dce65c30884ec8eb1db
+  LiferayScreens: fe6f1284407c0a8154ae52eca7c69791ababa6b5
   LiferayScreensThemeDemo: 67704fdf283bc4c39fd33c609d408eeffc34164e
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MDRadialProgress: 6af31db0315f1b687df825a73481a2a443182402
-  ODRefreshControl: 4c4c413bf70d2ea0c02a28ac0a0b3b4bf4dbfdea
-  SMXMLDocument: 4ff79d0d7586239e93758c8610698b57cc0acd82
+  MDRadialProgress: 1068574b9b4b870f64b605b07f734385bde5104d
+  ODRefreshControl: 907e6149d72dde488d5917ccfabee5bd8d711a20
+  SMXMLDocument: e0d9fbf726a2a0921871b492966458acb3ad9689
   TNRadioButtonGroup: f5fb9b545d8913bbabe6a72ea1fa6fba4d833bb6
-  UICKeyChainStore: c5719c814e8bd69e74e4a0fc09daf8f4d6257a59
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

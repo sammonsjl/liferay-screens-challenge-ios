@@ -152,6 +152,10 @@ import LiferayScreens
 
 	//MARK: UITextFieldDelegate
 
+	public func textFieldDidBeginEditing(textField: UITextField) {
+		textInput = textField
+	}
+
 	public func textField(textField: UITextField!,
 			shouldChangeCharactersInRange range: NSRange,
 			replacementString string: String!)

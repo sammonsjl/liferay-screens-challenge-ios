@@ -1,6 +1,0 @@
-framework module TNRadioButtonGroup {
-  umbrella header "Pods-TNRadioButtonGroup-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -14,17 +14,26 @@
 import UIKit
 import LiferayScreens
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LoginScreenletDelegate {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-
+        
+        //self.screenlet.delegate = self;
 	}
 
 	private func goToNextScreen() {
 		self.performSegueWithIdentifier("form", sender: self)
 	}
+    
+    /**
+    func screenlet(screenlet: BaseScreenlet,
+        onLoginResponseUserAttributes attributes: [String:AnyObject]) {
+            println("User attributes -> \(attributes)")
+            
+            self.goToNextScreen()
+    }
+    **/
 
 }
 

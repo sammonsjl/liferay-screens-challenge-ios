@@ -1,1 +1,0 @@
-../../../LiferayScreens/ios/Framework/Core/Services/LiferayScreensFrameworkConfig.h

@@ -1,6 +1,0 @@
-framework module DTPickerPresenter {
-  umbrella header "Pods-DTPickerPresenter-umbrella.h"
-
-  export *
-  module * { export * }
-}

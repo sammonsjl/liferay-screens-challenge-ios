@@ -148,6 +148,21 @@ static inline CGFloat lerp(CGFloat a, CGFloat b, CGFloat p)
     return 0;
 }
 
+- (void)setActivityIndicatorViewColor:(UIColor *)activityIndicatorViewColor
+{
+    if ([_activity isKindOfClass:[UIActivityIndicatorView class]] && [_activity respondsToSelector:@selector(setColor:)]) {
+        [(UIActivityIndicatorView *)_activity setColor:activityIndicatorViewColor];
+    }
+}
+
+- (UIColor *)activityIndicatorViewColor
+{
+    if ([_activity isKindOfClass:[UIActivityIndicatorView class]] && [_activity respondsToSelector:@selector(color)]) {
+        return [(UIActivityIndicatorView *)_activity color];
+    }
+    return nil;
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"contentInset"]) {
@@ -211,20 +226,38 @@ static inline CGFloat lerp(CGFloat a, CGFloat b, CGFloat p)
         }
         return;
     } else {
-        // Check if we can trigger a new refresh
+        // Check if we can trigger a new refresh and if we can draw the control
+        BOOL dontDraw = NO;
         if (!_canRefresh) {
             if (offset >= 0) {
+                // We can refresh again after the control is scrolled out of view
                 _canRefresh = YES;
                 _didSetInset = NO;
             } else {
-                return;
+                dontDraw = YES;
             }
         } else {
             if (offset >= 0) {
-                return;
+                // Don't draw if the control is not visible
+                dontDraw = YES;
             }
         }
+        if (offset > 0 && _lastOffset > offset && !self.scrollView.isTracking) {
+            // If we are scrolling too fast, don't draw, and don't trigger unless the scrollView bounced back
+            _canRefresh = NO;
+            dontDraw = YES;
+        }
+        if (dontDraw) {
+            _shapeLayer.path = nil;
+            _shapeLayer.shadowPath = nil;
+            _arrowLayer.path = nil;
+            _highlightLayer.path = nil;
+            _lastOffset = offset;
+            return;
+        }
     }
+    
+    _lastOffset = offset;
     
     BOOL triggered = NO;
     
